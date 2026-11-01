@@ -1,0 +1,10 @@
+# scholium book configuration (private: exclude from version control)
+schema_version = 1
+
+[manuscript]
+# Absolute paths or paths relative to this file. Add folders before ingestion.
+source_dirs = [] # e.g. ["manuscript", "/absolute/path/to/chapters"]
+languages = ["en", "de"]
+
+[storage]
+data_dir = ".scholium"

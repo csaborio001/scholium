@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scholium"
+version = "0.7.0"
+description = "Local scholarly manuscript tools"
+requires-python = ">=3.12"
+dependencies = ["watchdog==6.0.0"]
+
+[project.optional-dependencies]
+dev = ["pytest==8.3.5", "ruff==0.11.13"]
+
+[project.scripts]
+scholium = "scholium.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--basetemp=.test-tmp"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = [".verify", ".test-tmp"]

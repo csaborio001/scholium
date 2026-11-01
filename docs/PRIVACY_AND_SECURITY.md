@@ -1,0 +1,21 @@
+# Privacy and security — proposed defaults
+
+The author authorized one chapter copy for Phase 2 extraction and this Codex conversation. The original was read without modification; the copy, exports and review checklist are private under .verify/phase2. No AI integration or unattended API processing exists.
+
+Keep development files under the project root. Configured book workspaces keep extracts, databases, snapshots, reports and logs local in their configured data directory; source folders are configured separately. Never modify Word originals. Indexing must work offline without API keys. Use synthetic documents for automated tests.
+
+Reading manuscript text into a Codex conversation is itself a disclosure to an AI service; a local index does not make that conversation local. The author permits manuscript passages in this Codex conversation. This is not permission for unattended API use or transmission to other services. Future API processing needs explicit scope, provider, cost and retention decisions; Codex access does not supply an API subscription.
+
+Phase 1 includes Git exclusions for manuscript/, generated/, data/, reports/, logs/, `scholium.toml`, `.scholium/`, local configuration, secrets and environments. Apply equivalent exclusions in separately configured book workspaces; repository exclusions do not cover external folders. Git ignore rules do not protect files already tracked or prevent other applications/backups from syncing them. The development .gitignore is installed; book workspaces need equivalent exclusions, particularly for custom output folders. No project Git repository has been initialized.
+
+Prefer owner-only permissions for sensitive outputs. Logs should contain operational metadata, not passages or credentials. No telemetry, remote embedding service or automatic URL fetching. Phase 7 adds verified backup/restore; revisions and backups are retained indefinitely with no automatic pruning.
+
+Phase 2 exports use owner-only directories (0700) and files (0600). JSON and Markdown include manuscript text and source paths; treat both as sensitive. The default terminal summary includes counts and warnings, not passages. XML DTD/entities, archive traversal and oversized archives are rejected. No archive members are extracted to disk; images are referenced by package path only. File access timestamps may change when originals are read, but their bytes are never written.
+
+Phase 3: the user authorized configured-corpus ingestion. The index and retained revision text live in the configured private data directory; development test/audit artifacts remain under the project root. Read-only retrieval creates no files or database updates. Ingestion uses owner-only data-directory/index permissions. No manuscript bytes are modified and no unattended AI/API processing is enabled.
+
+Phase 4 migration backups contain the complete private index and use 0600 files under the configured data directory. The foreground watcher creates a PID-only OS lock file and emits operational events to its terminal; it does not enable persistent logs, cloud uploads, AI calls, original-file edits or a startup service. All canonical revision snapshots and events are retained until an explicit future cleanup policy is approved.
+
+Phase 6 imports conversation-authored or human-authored JSON on demand and stores full private cited evidence in analysis.sqlite3 (0600). Reads do not create it. It has no network/provider code and no API key handling; unsupported provider kinds are rejected. Review history and historical assertions are retained indefinitely. Backups must include both SQLite databases. Citation validation does not authenticate producers or establish interpretive truth.
+
+Phase 7 backup files are 0600 under 0700 directories. Backup-check rejects file symlinks, unknown names/schemas, incomplete operations and checksum or analysis-dependency mismatches. Hashes do not authenticate an attacker-controlled manifest. Restore writes a separate new directory; activation is explicit. No persistent application logs exist by default. Optional startup output is discarded to /dev/null. The application does not enable a login service, upload backups or change shell profiles. .verify is owner-only; tests contain synthetic content only.
