@@ -29,3 +29,6 @@ Version **0.7.0** includes verified backup/recovery and book-specific Codex setu
 
 Development lives under /Users/csaborio/code/scholium. Book workspaces, Word sources and data locations are independently configurable. The original [build plan](docs/SCHOLARLY_MANUSCRIPT_INTELLIGENCE_BUILD_PLAN.md) is retained as reference.
 -First working prototype, all phases created and tested by codex.
+
+Continuing in a new Codex conversation? Read [the project handover](docs/HANDOVER.md).
+-Added project handover

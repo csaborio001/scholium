@@ -16,7 +16,7 @@ Start manuscript work by reading `docs/ASSISTANT_RETRIEVAL.md` and running:
 
 Use this same absolute executable and explicit `--config` for search, passage, notes and other book commands. The app folder does not contain this book's configuration; do not rely on configuration discovery from the app folder. Do not ask the user to repeat these paths in every new chat.
 
-Read `docs/PHASE_REPORTS/PHASE_5.md` when project progress is relevant. Persistent project files convey the setup and recorded progress; they do not supply the complete prior chat or the whole manuscript. Retrieve manuscript evidence for each question rather than assuming memory of earlier answers.
+Read `docs/HANDOVER.md` and `docs/PHASE_REPORTS/PHASE_7.md` when project progress is relevant. Persistent project files convey the setup and recorded progress; they do not supply the complete prior chat or the whole manuscript. Retrieve manuscript evidence for each question rather than assuming memory of earlier answers.
 
 ## Development and evidence rules
 
